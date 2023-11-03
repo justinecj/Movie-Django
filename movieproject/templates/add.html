@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add movies</title>
+</head>
+<body>
+{% block body %}
+<div class="add">
+    <h3 style="color: red;">ADD DETAILS</h3>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter the movie Name"><br>
+        <input type="text" name="desc" placeholder="Enter the movie Description"><br>
+        <input type="text" name="year" placeholder="Enter the movie Year"><br>
+        <input type="file" name="img"><br>
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
+</body>
+</html>
